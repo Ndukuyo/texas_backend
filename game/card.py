@@ -1,0 +1,37 @@
+class Card():
+
+    RANKS=["A","K","Q","J","10","9","8","7","6","5","4","3","2"]
+    SUITES=["HEART","DIAMOND","SPADE","CLUBS"]
+    def __init__(self,suite,rank):
+
+       
+       if not isinstance(suite,str):
+           raise TypeError(f"Suite expected to be a string got {type(suite).__name__}")
+       
+       if not isinstance(rank,str):
+          raise TypeError(f"Suite expected to be a string got {type(rank).__name__}")
+
+       suiteUpper=suite.upper()
+       rankUpper=rank.upper()
+       if rankUpper in Card.RANKS:
+           pass
+       else:
+           raise TypeError(f"Added rank not in rank list {Card.RANKS}")
+       
+       if suiteUpper in Card.SUITES:
+           pass
+       else:
+           raise TypeError(f"Added suite not in suite list {Card.SUITES}")
+       
+       self.rank=rankUpper
+       self.suite=suiteUpper
+
+    def print_card(self):
+        print(f"{self.rank} {self.suite}")
+
+if __name__=="__main__":
+    card1=Card(suite="Joker",rank="A")
+    card1.print_card()
+
+    card2=Card(suite="Clubs",rank="3")
+    card2.print_card()
