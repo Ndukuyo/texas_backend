@@ -1,0 +1,1 @@
+daraja API something :- https://www.postman.com/solar-spaceship-319314/public-test-apis/collection/gpo6cf2/safaricom-apis?sideView=agentMode
